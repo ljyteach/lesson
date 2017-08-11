@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name:'xiaoming',
+            age:2,
+            sayName:function(){
+                console.log("我是"+ this.name);
+                return this;
+            },
+            sayAge:function(){
+                console.log("我今年"+this.age+"岁了");
+                return this;
+            }
+        }
+
+        obj.sayAge().sayName();
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		button{
+			width:80px;
+			height:30px;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<button>按钮</button>
+	<script src="../script/jquery.js"></script>
+	<script>
+		$("button").css("background-color").click(function(){  //1.为什么可以链式操作
+			$(this).css("background-color","#ff0")                    //2.为什么this外面需要加$
+		});
+		
+		//3.$后都可以加什么内容
+	</script>
+</body>
+</html>

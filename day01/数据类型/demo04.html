@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="target1">1</li>
+        <li id="target2">2</li>
+        <li id="target3">3</li>
+        <li id="target4">4</li>
+        <li id="target5">5</li>
+    </ul>
+    <script>
+        var li = document.querySelector('#target3');
+
+        function siblings(opt){
+            var newArr = [];
+            var aLi = opt.parentNode.children;
+            for(var i = 0;i<aLi.length;i++){
+                if(aLi[i] !== opt){
+                    newArr.push(aLi[i])
+                }
+            }
+            return newArr;
+        }
+
+        console.log(siblings(li));
+    </script>
+</body>
+</html>

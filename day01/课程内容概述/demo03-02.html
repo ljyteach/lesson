@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		button{
+			width:80px;
+			height:30px;
+			background-color: #ff0;
+		}
+	</style>
+</head>
+<body>
+	<button>按钮</button>
+	<script src="../script/jquery.js"></script>
+	<script>
+		//为这个按钮扩展一个方法，每次执行这个方法的时候都可以让背景变红。
+		$.prototype.setBgRed = function(){
+			this.css("background-color","red");
+		}
+
+		$("button").click(function(){
+			$(this).setBgRed();
+		})
+	</script>
+</body>
+</html>

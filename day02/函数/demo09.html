@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        var module = (function(){
+            function fun1(){
+                console.log("我是fun1");
+            }
+            function fun2(){
+                console.log("我是fun2");
+            }
+            var num1 = 10;
+            var num2 = 100;
+
+            return {
+                num1:num1,
+                fun1:fun1
+            }
+        })()
+
+        console.log(module.num1);
+        console.log(module.num2);
+        module.fun1();
+        module.fun2();
+
+
+    </script>
+</body>
+</html>

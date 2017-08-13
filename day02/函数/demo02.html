@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function count(n){
+        //     var sum = 1;
+        //     for(var i = 1;i<=n;i++){
+        //         sum *= i;
+        //     }
+        //     return sum;
+        // }
+
+        function count(n){
+            if(n === 1){
+                return n;
+            }else{
+                return n * count(n-1);
+            }
+        }
+
+        console.log(count(6));
+    </script>
+</body>
+</html>

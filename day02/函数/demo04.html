@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var student1 = {
+            name:'xiaoming',
+            age:2,
+            sex:'male',
+            friends:['Lily',"Lucy"]
+        }
+
+        //深度克隆
+        function clone(opt){
+            var newObj = opt instanceof Array?[]:{};
+            for(var i in opt){
+                if(opt[i] instanceof Object){
+                    newObj[i] = clone(opt[i]);
+                }else{
+                    newObj[i] = opt[i];
+                }
+            }
+            return newObj;
+        }
+
+        var student2 = clone(student1);
+        student1.friends[0] = "xiaohong";
+        console.log(student1.friends);
+        console.log(student2.friends);
+       
+    </script>
+</body>
+</html>

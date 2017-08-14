@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>鸭梨</li>
+        <li>芒果</li>
+        <li>草莓</li>
+    </ul>
+    <script>
+        var li = document.querySelectorAll('li');
+        // for(var i = 0;i<li.length;i++){
+        //     li[i].index = i;
+        //     li[i].onclick = function(){
+        //         console.log(this.index);
+        //     }
+        // }
+
+         for(let i = 0;i<li.length;i++){
+            li[i].onclick = function(){
+                var ind = index(this);
+                console.log(ind);
+            }
+        }
+
+        function index(opt){
+            var brother = opt.parentNode.children;
+            for(var i = 0;i<brother.length;i++){
+                if(brother[i] === opt){
+                    return i;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .big{
+            width:300px;
+            height:300px;
+            background-color: #ff0;
+        }
+        .center{
+            width:200px;
+            height:200px;
+            background-color: #0f0;
+        }
+        .small{
+            width:100px;
+            height:100px;
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="center">
+            <div class="small"></div>
+        </div>
+    </div>
+    <script>
+        //事件  
+        var big = document.querySelector('.big');  
+        var center = document.querySelector('.center'); 
+        var small = document.querySelector('.small'); 
+
+        big.onclick = function(){
+            console.log('Im big')
+        }
+        center.onclick = function(){
+            console.log('Im center')
+        }
+        small.onclick = function(){
+            console.log('Im small')
+        }
+    </script>
+</body>
+</html>

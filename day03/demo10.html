@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var list = [1,3,9,7,5];
+
+        var list = [
+            {name:"xiaoming",age:1},
+            {name:"xiaoming",age:6},
+            {name:"xiaoming",age:9},
+            {name:"xiaoming",age:2},
+            {name:"xiaoming",age:5},
+            {name:"xiaoming",age:3}
+
+        ]
+
+        // list.reverse();
+
+        list.sort(function(a,b){
+            return a.age - b.age
+        });
+
+        console.log(list);
+    </script>
+</body>
+</html>

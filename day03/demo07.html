@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var targetTimeStr = "2017-8-20 12:30";
+        var targetTime = new Date(targetTimeStr);
+
+        var now = new Date().getTime();
+        var ms = targetTime.getTime()-now;
+
+        console.log(Math.floor(ms % (60 * 60 * 1000)));
+    </script>
+</body>
+</html>

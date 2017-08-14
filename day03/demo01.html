@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>鸭梨</li>
+        <li>芒果</li>
+        <li>草莓</li>
+    </ul>
+    <script>
+        var li = document.querySelectorAll('li');
+        // for(var i = 0;i<li.length;i++){
+        //     li[i].onclick = (function(x){
+        //         return function(){
+        //             console.log(x);
+        //         }
+        //     })(i)
+        // }
+
+        for(let i = 0;i<li.length;i++){
+            li[i].onclick = function(){
+                console.log(i);
+            }
+        }
+        
+
+
+    </script>
+</body>
+</html>

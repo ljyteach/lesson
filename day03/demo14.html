@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+        var input = document.querySelector('input');
+        var reg = /(\d{4})\-(\d{2})-(\d{2})/;
+        input.onblur = function(){
+            var re = reg.exec(this.value);
+            if(re){
+                console.log(re[1]+"年");
+                console.log(re[2]+"月");
+                console.log(re[3]+"日");
+            }
+        }
+
+    </script>
+</body>
+</html>

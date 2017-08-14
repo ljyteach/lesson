@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <button>按钮1</button>
+        <button>按钮2</button>
+    </div>
+    <script>
+        //事件委托
+        var box = document.querySelector('.box');
+
+        box.onclick = function(e){
+            var target = e.target
+            alert(target.innerHTML)
+        }
+
+    </script>
+</body>
+</html>

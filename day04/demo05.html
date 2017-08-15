@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Cat(){}
+
+        //原型对象
+        Cat.prototype.name = '喵喵';
+        Cat.prototype.sayName = function(){
+            console.log("我是"+this.name);
+        }
+
+        var cat = new Cat();
+        cat.sayName();
+    </script>
+</body>
+</html>

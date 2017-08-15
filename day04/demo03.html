@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">按钮</button>
+    <button class="bind">绑定</button>
+    <button class="unbind">解绑</button>
+    <script>
+        
+        var btn = document.querySelector('.btn');
+        var bind = document.querySelector('.bind');
+        var unbind = document.querySelector('.unbind');
+
+
+        function showData(){
+            console.log('hello world');
+        }
+
+        bind.addEventListener('click',function(){
+            btn.addEventListener('click',showData);
+        })
+
+        unbind.addEventListener('click',function(){
+            btn.removeEventListener('click',showData)
+        })
+
+    </script>
+</body>
+</html>

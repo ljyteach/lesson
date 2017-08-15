@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            height:100px;
+            width: 100px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button>获取颜色</button>
+    <script src="../../script/jquery.js"></script>
+    <script src="color.js"></script>
+    <script>
+
+        $('button').click(function(){
+            alert($('div').color());
+        })
+    </script>
+</body>
+</html>

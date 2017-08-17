@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    form(action="/insert")
+        input(type="text",name="fruit")
+        input(type="submit")
+    ul
+        each val,index in data
+            li #{val}

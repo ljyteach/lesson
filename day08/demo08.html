@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <father></father>
+    </div>
+
+
+
+
+    
+    <script src="vue.js"></script>
+    <script>
+        Vue.component('fruitlist',{
+            props:['myfruits'],
+            template:`
+                <ul>
+                    <li v-for="fruit in myfruits">{{fruit}}</li>
+                </ul>
+            `
+        })
+
+        Vue.component('father',{
+            template:`
+            <div>
+                <input v-model="newFruit" type="text">
+                <button v-on:click="insert">添加</button>
+                <fruitlist v-bind:myfruits="fruits"></fruitlist>
+            </div>
+            `,
+            data:function(){
+                return {
+                    fruits:['香蕉','苹果','鸭梨','芒果','草莓'],
+                    newFruit:''
+                }
+            },
+            methods:{
+                insert:function(){
+                    this.fruits.push(this.newFruit);
+                }
+            }
+        })
+
+        new Vue({
+            el:'#app'
+        })
+    </script>
+</body>
+</html>

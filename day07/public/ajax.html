@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>asycn</h1>
+    <button class="btn">获取信息</button>
+    <script>
+        //async函数
+        function ajax(method,url){
+            return new Promise(function(resolve){
+                var xhr = new XMLHttpRequest();
+                xhr.open(method,url);
+                xhr.send();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState === 4 && xhr.status === 200){
+                        resolve(xhr.responseText);
+                    }
+                }
+            })
+        }
+
+        document.querySelector('.btn').onclick = async function(){ 
+            let name = await ajax('get','/getname');
+            console.log(name);
+            let sex = await ajax('get','/getsex');
+            console.log(sex);
+        }
+
+//callbackhell
+    </script>
+</body>
+</html>

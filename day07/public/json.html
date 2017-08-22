@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>json</h1>
+    <button class="btn">获取信息</button>
+
+    <script>
+        //async函数
+        function ajax(method,url,callback){
+            var xhr = new XMLHttpRequest();
+            xhr.open(method,url);
+            xhr.send();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState === 4 && xhr.status === 200){
+                    callback(xhr.responseText);
+                }
+            }
+        }
+
+
+        document.querySelector('.btn').onclick = function(){ 
+            ajax('get','/getstudent',function(data){
+                var stu = JSON.parse(data);
+                console.log(typeof stu);
+            });
+        }
+
+//callbackhell
+    </script>
+</body>
+</html>

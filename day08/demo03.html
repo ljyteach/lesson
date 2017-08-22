@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="showdata">按钮</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                txt:'hello vue'
+            },
+            methods:{
+                showdata:function(){
+                    alert(this.txt)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

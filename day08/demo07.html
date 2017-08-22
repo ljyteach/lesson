@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <hello message="我是一个h标签"></hello>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        Vue.component('hello',{
+            props:["message"],
+            template:`<h1>{{message}}</h1>`
+        })
+
+        new Vue({
+            el:'#app'
+        })
+    </script>
+</body>
+</html>

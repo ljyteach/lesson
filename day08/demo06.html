@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">  
+        <count></count>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+
+        Vue.component('count',{
+            template:`
+            <div>
+                <button v-on:click="add">+</button>
+                <span>{{number}}</span>
+                <button v-on:click="sub">-</button>
+            </div>
+            `,
+            data:function(){
+                return {
+                    number:0
+                }
+            },
+            methods:{
+                add:function(){
+                    this.number++;
+                },
+                sub:function(){
+                    if(this.number>0){
+                        this.number--;
+                    }
+                }
+            }
+        })
+
+        new Vue({
+            el:'#app'
+        })
+
+
+    </script>
+</body>
+</html>

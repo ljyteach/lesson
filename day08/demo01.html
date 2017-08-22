@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{txt}}</h1>
+        <input v-model="txt" type="text">
+        <p v-bind:title="tit">这是一个测试段落</p>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                txt:'hello vue',
+                tit:'这是一个p标签'
+            }
+        })
+    </script>
+</body>
+</html>

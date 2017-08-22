@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <hello v-on:myevent="ev"></hello>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        
+        Vue.component('hello',{
+            template:`<button v-on:click="senddata">传值</button>`,
+            data:function(){
+                return {
+                    text:'hello component'
+                }
+            },
+            methods:{
+                senddata:function(){
+                    this.$emit('myevent',this.text);
+                }
+            }
+        })
+
+        new Vue({
+            el:'#app',
+            methods:{
+                ev:function(data){
+                    alert(data)
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
